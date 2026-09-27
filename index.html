@@ -1,0 +1,725 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnav Rathaur | Web Developer, Esports Designer & AI Prompt Specialist</title>
+    <meta name="description" content="Official portfolio of Arnav Rathaur. High-converting Web Design, Gaming Thumbnails, Esports Logos, and AI Prompt Workflows.">
+    
+    <!-- Google Fonts & Tailwind -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cyan: '#00f2fe',
+                            neon: '#4facfe',
+                            purple: '#7f00ff',
+                            pink: '#ff007f',
+                            dark: '#0a0d14',
+                            card: '#121824',
+                            border: '#1f293d'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #07090e;
+            color: #f3f4f6;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .neon-glow-cyan {
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.35);
+        }
+
+        .neon-glow-pink {
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.35);
+        }
+
+        .neon-glow-purple {
+            box-shadow: 0 0 25px rgba(127, 0, 255, 0.35);
+        }
+
+        .neon-border {
+            border: 1px solid rgba(0, 242, 254, 0.25);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .neon-border:hover {
+            border-color: #00f2fe;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .glass-panel {
+            background: rgba(18, 24, 36, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #ff007f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #00f2fe 0%, #7f00ff 100%);
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #07090e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f293d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00f2fe;
+        }
+    </style>
+</head>
+<body class="selection:bg-cyan-500 selection:text-black">
+
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute top-1/3 -right-40 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-pink-600/15 rounded-full blur-3xl animate-pulse-slow"></div>
+    </div>
+
+    <header class="sticky top-0 z-40 glass-panel border-b border-gray-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo / Avatar Brand -->
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="relative w-12 h-12 rounded-xl bg-gradient-to-tr from-cyan-500 via-purple-600 to-pink-500 p-[2px] shadow-lg group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center overflow-hidden">
+                        <!-- Custom AR Neon SVG Avatar -->
+                        <svg class="w-8 h-8 text-cyan-400" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 80 L50 20 L80 80 L65 80 L50 50 L35 80 Z" fill="url(#grad1)"/>
+                            <circle cx="50" cy="32" r="6" fill="#ff007f"/>
+                            <path d="M30 65 L70 65" stroke="#00f2fe" stroke-width="4" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00f2fe" />
+                                    <stop offset="100%" stop-color="#7f00ff" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <span class="font-display font-bold text-xl tracking-wider text-white group-hover:text-cyan-400 transition-colors">ARNAV<span class="text-cyan-400">.</span></span>
+                    <span class="block text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Web & Visual Creator</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#services" class="hover:text-cyan-400 transition-colors">Services</a>
+                <a href="#portfolio" class="hover:text-cyan-400 transition-colors">Work</a>
+                <a href="#reviews" class="hover:text-cyan-400 transition-colors">Testimonials</a>
+                <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+            </nav>
+
+            <!-- Quick WhatsApp Header Action -->
+            <div class="flex items-center space-x-4">
+                <button onclick="openWhatsApp('General Inquiry', 'Hi Arnav, I would like to discuss a project with you!')" class="relative group overflow-hidden px-5 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-500 to-blue-600 text-black hover:opacity-95 transition-all shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2">
+                    <i data-lucide="message-square" class="w-4 h-4 text-black"></i>
+                    <span>Let's Talk</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+
+        <section id="home" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                
+                <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold tracking-wider uppercase">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                        <span>Available for Freelance & Agencies</span>
+                    </div>
+
+                    <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight text-white">
+                        Converting Ideas Into <span class="gradient-text">High-Impact</span> Visuals & Code.
+                    </h1>
+
+                    <p class="text-gray-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        Hey! I'm <strong class="text-white">Arnav Rathaur (अर्णव राठौर)</strong> — A multi-disciplinary developer and creative designer crafting modern websites, viral esports thumbnails, high-performing mascot branding, and AI prompt workflows.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+                        <button onclick="openWhatsApp('Instant Order', 'Hi Arnav, I want to place an order for your services!')" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-black bg-gradient-to-r from-cyan-400 via-teal-300 to-cyan-500 hover:from-cyan-300 hover:to-cyan-400 shadow-lg shadow-cyan-500/30 flex items-center justify-center space-x-3 transition-all transform hover:-translate-y-0.5">
+                            <i data-lucide="zap" class="w-5 h-5 fill-black"></i>
+                            <span>Hire Me On WhatsApp</span>
+                        </button>
+
+                        <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-white bg-brand-card hover:bg-gray-800 border border-gray-700/80 flex items-center justify-center space-x-2 transition-all">
+                            <span>Explore Portfolio</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-800/80 text-center md:text-left">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-display">150+</div>
+                            <div class="text-xs text-gray-400 mt-1">High-CTR Thumbnails</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-purple-400 font-display">25+</div>
+                            <div class="text-xs text-gray-400 mt-1">Websites Built</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-pink-400 font-display">99%</div>
+                            <div class="text-xs text-gray-400 mt-1">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Avatar Badge Art -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500 via-purple-600 to-pink-500 rounded-3xl blur-2xl opacity-40 animate-pulse-slow"></div>
+                        <div class="relative w-full h-full glass-panel rounded-3xl p-6 border border-cyan-500/30 flex flex-col items-center justify-center text-center shadow-2xl">
+                            
+                            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-600 p-[3px] mb-4 shadow-xl">
+                                <div class="w-full h-full bg-brand-dark rounded-xl flex items-center justify-center">
+                                    <svg class="w-20 h-20 text-cyan-400" viewBox="0 0 100 100" fill="none">
+                                        <path d="M15 75 L50 20 L85 75 L70 75 L50 45 L30 75 Z" fill="url(#avatarGrad)"/>
+                                        <polygon points="50,15 58,30 42,30" fill="#00f2fe"/>
+                                        <circle cx="50" cy="55" r="8" fill="#ff007f"/>
+                                        <defs>
+                                            <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#00f2fe"/>
+                                                <stop offset="50%" stop-color="#7f00ff"/>
+                                                <stop offset="100%" stop-color="#ff007f"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-bold font-display text-white">Arnav Rathaur</h3>
+                            <p class="text-xs text-cyan-400 font-medium tracking-wide mt-0.5">FULL-STACK VISUAL EXPERT</p>
+
+                            <div class="mt-4 flex flex-wrap gap-2 justify-center">
+                                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-gray-800 text-gray-300 border border-gray-700">Web Dev</span>
+                                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-gray-800 text-gray-300 border border-gray-700">High-CTR Graphics</span>
+                                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-gray-800 text-gray-300 border border-gray-700">AI Prompting</span>
+                            </div>
+
+                            <button onclick="openWhatsApp('Quick Consultation', 'Hi Arnav, I saw your portfolio avatar badge and want to hire you!')" class="mt-5 w-full py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500 hover:text-black transition-all">
+                                Quick WhatsApp Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="services" class="py-16 bg-brand-dark/60 border-y border-gray-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold text-cyan-400 uppercase tracking-widest">My Expertise</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-2">Services Built To Scale Your Brand</p>
+                    <p class="text-gray-400 text-sm mt-2">Select a service to directly book or request pricing via WhatsApp.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Service 1: Web Design -->
+                    <div class="glass-panel p-6 rounded-2xl neon-border flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="layout" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white font-display mb-2">Web Design & Dev</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Responsive, lightning-fast landing pages, modern personal portfolios, and SaaS web application frontends using HTML/Tailwind/React.
+                            </p>
+                        </div>
+                        <button onclick="openWhatsApp('Web Design Service', 'Hi Arnav, I want to build a modern website for my project.')" class="w-full py-2.5 rounded-xl bg-gray-800 hover:bg-cyan-500 hover:text-black text-cyan-400 text-xs font-bold transition-all flex items-center justify-center space-x-2">
+                            <span>Book Web Design</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 2: Esports Thumbnails -->
+                    <div class="glass-panel p-6 rounded-2xl neon-border flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="flame" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white font-display mb-2">High-CTR Thumbnails</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Eye-popping gaming & esports thumbnails engineered for maximum Click-Through-Rate (BGMI, Free Fire, YouTube Gaming).
+                            </p>
+                        </div>
+                        <button onclick="openWhatsApp('Thumbnail Design', 'Hi Arnav, I need High-CTR Thumbnails for my YouTube channel.')" class="w-full py-2.5 rounded-xl bg-gray-800 hover:bg-purple-500 hover:text-black text-purple-400 text-xs font-bold transition-all flex items-center justify-center space-x-2">
+                            <span>Book Thumbnails</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 3: AI Prompting -->
+                    <div class="glass-panel p-6 rounded-2xl neon-border flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="sparkles" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white font-display mb-2">AI Prompts & Automation</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Custom Midjourney prompt engineering, ChatGPT copy workflows, visual style generation, and creative automation solutions.
+                            </p>
+                        </div>
+                        <button onclick="openWhatsApp('AI Prompting Service', 'Hi Arnav, I am interested in AI Prompt Engineering & Automation.')" class="w-full py-2.5 rounded-xl bg-gray-800 hover:bg-pink-500 hover:text-black text-pink-400 text-xs font-bold transition-all flex items-center justify-center space-x-2">
+                            <span>Book AI Service</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 4: Mascot & Branding -->
+                    <div class="glass-panel p-6 rounded-2xl neon-border flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="shield" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white font-display mb-2">Mascot Logos & Banners</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Premium esports team logos, mascot avatars, Twitch overlay sets, and social media brand identity packages.
+                            </p>
+                        </div>
+                        <button onclick="openWhatsApp('Branding Service', 'Hi Arnav, I need a Mascot Logo and Branding for my team.')" class="w-full py-2.5 rounded-xl bg-gray-800 hover:bg-teal-400 hover:text-black text-teal-400 text-xs font-bold transition-all flex items-center justify-center space-x-2">
+                            <span>Book Branding</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <h2 class="text-xs font-bold text-cyan-400 uppercase tracking-widest">Featured Portfolio</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-1">Explore Crafted Works</p>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-2 mt-4 md:mt-0">
+                    <button onclick="filterPortfolio('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-cyan-500 text-black border border-cyan-400 transition-all" data-category="all">All Works</button>
+                    <button onclick="filterPortfolio('web')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-brand-card text-gray-300 border border-gray-800 hover:border-gray-700 transition-all" data-category="web">Websites</button>
+                    <button onclick="filterPortfolio('thumbnails')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-brand-card text-gray-300 border border-gray-800 hover:border-gray-700 transition-all" data-category="thumbnails">Thumbnails</button>
+                    <button onclick="filterPortfolio('prompts')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-brand-card text-gray-300 border border-gray-800 hover:border-gray-700 transition-all" data-category="prompts">AI Prompts</button>
+                    <button onclick="filterPortfolio('branding')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-brand-card text-gray-300 border border-gray-800 hover:border-gray-700 transition-all" data-category="branding">Mascot & Logos</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div id="portfolio-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Javascript will inject portfolio items dynamically -->
+            </div>
+        </section>
+
+        <section id="reviews" class="py-16 bg-brand-dark/80 border-t border-gray-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold text-pink-400 uppercase tracking-widest">Client Feedback</h2>
+                    <p class="text-3xl font-extrabold font-display text-white mt-1">What Creators & Clients Say</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    
+                    <!-- Review 1 -->
+                    <div class="glass-panel p-6 rounded-2xl border border-gray-800 relative">
+                        <div class="flex text-amber-400 mb-3 space-x-1">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                            "Arnav designed 5 BGMI thumbnails for my tournament stream and my CTR jumped from 4% to 11%! Highly recommended for high quality esports visuals."
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-purple-600/30 border border-purple-500/40 flex items-center justify-center font-bold text-xs text-purple-300">
+                                VR
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Viper Esports</h4>
+                                <span class="text-[10px] text-gray-400">YouTube Gaming Creator (120K Subscribers)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="glass-panel p-6 rounded-2xl border border-gray-800 relative">
+                        <div class="flex text-amber-400 mb-3 space-x-1">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                            "Got my portfolio website designed by Arnav. Super fast turn-around, ultra modern dark UI, and everything works smoothly on mobile."
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-cyan-600/30 border border-cyan-500/40 flex items-center justify-center font-bold text-xs text-cyan-300">
+                                RK
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Rahul Kapoor</h4>
+                                <span class="text-[10px] text-gray-400">Digital Marketing Consultant</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="glass-panel p-6 rounded-2xl border border-gray-800 relative">
+                        <div class="flex text-amber-400 mb-3 space-x-1">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                            "Arnav's AI Prompt guidance and Midjourney assets saved us hours of custom design work. Brilliant understanding of AI prompt workflows!"
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-pink-600/30 border border-pink-500/40 flex items-center justify-center font-bold text-xs text-pink-300">
+                                AM
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Aman Mehta</h4>
+                                <span class="text-[10px] text-gray-400">Agency Founder</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-cyan-500/30 relative overflow-hidden text-center md:text-left">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="grid md:grid-cols-12 gap-8 items-center relative z-10">
+                    <div class="md:col-span-8 space-y-4">
+                        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest">Ready to Elevate Your Brand?</span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white">Let's build something epic together.</h2>
+                        <p class="text-gray-300 text-sm leading-relaxed max-w-xl">
+                            Whether you need a high-converting web landing page, viral esports graphics, or AI automation prompts — I am available to work right away.
+                        </p>
+                    </div>
+
+                    <div class="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 justify-center">
+                        <button onclick="openWhatsApp('Direct Order', 'Hi Arnav, I am ready to start a project with you!')" class="px-6 py-3.5 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-black font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/20 transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                            <span>Chat on WhatsApp</span>
+                        </button>
+                        
+                        <button onclick="copyToClipboard('arnavrathaur1087@gmail.com', 'Email copied to clipboard!')" class="px-6 py-3.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all">
+                            <i data-lucide="copy" class="w-4 h-4"></i>
+                            <span>Copy Email ID</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="project-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-2xl rounded-2xl border border-cyan-500/40 p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+            
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-800 hover:bg-red-500 hover:text-white flex items-center justify-center text-gray-400 transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div id="modal-content" class="space-y-4">
+                <!-- Modal Details injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 glass-panel border border-cyan-500/50 px-5 py-3 rounded-xl text-cyan-300 text-xs font-semibold shadow-2xl hidden flex items-center space-x-2">
+        <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+        <span id="toast-msg">Copied!</span>
+    </div>
+
+    <footer class="border-t border-gray-800/80 bg-brand-dark py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            
+            <div class="flex items-center space-x-3">
+                <span class="font-display font-bold text-lg text-white">ARNAV RATHAUR</span>
+                <span class="text-xs text-gray-500">© 2026. All rights reserved.</span>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex items-center space-x-6 text-gray-400">
+                <a href="#" onclick="openWhatsApp('Footer Link', 'Hi Arnav!')" class="hover:text-cyan-400 transition-colors flex items-center space-x-1 text-xs">
+                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://github.com" target="_blank" class="hover:text-cyan-400 transition-colors flex items-center space-x-1 text-xs">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="hover:text-cyan-400 transition-colors flex items-center space-x-1 text-xs">
+                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // WhatsApp Phone Number (Configurable)
+        const WHATSAPP_NUMBER = "919876543210";
+
+        // Sample Portfolio Data
+        const portfolioItems = [
+            {
+                id: 1,
+                title: "Dark Neon Esports Tournament Web Platform",
+                category: "web",
+                tag: "Web Development",
+                description: "Full responsive dark-themed gaming tournament landing page with leaderboards, schedule grids, and live registrations.",
+                previewBg: "from-cyan-900 to-slate-900",
+                icon: "layout"
+            },
+            {
+                id: 2,
+                title: "BGMI Invitational High-CTR YouTube Thumbnail",
+                category: "thumbnails",
+                tag: "Gaming Graphic",
+                description: "Vibrant high-contrast PUBG/BGMI gaming thumbnail crafted with custom glow effects for 10%+ CTR conversion.",
+                previewBg: "from-purple-900 to-indigo-950",
+                icon: "flame"
+            },
+            {
+                id: 3,
+                title: "Midjourney Visuals Prompt Workflow",
+                category: "prompts",
+                tag: "AI Engineering",
+                description: "Comprehensive prompt recipe book for realistic 3D character avatars, sci-fi landscapes, and mascot art generation.",
+                previewBg: "from-pink-900 to-purple-950",
+                icon: "sparkles"
+            },
+            {
+                id: 4,
+                title: "Cyber Skull Esports Mascot Logo & Overlay",
+                category: "branding",
+                tag: "Branding",
+                description: "Vector mascot logo set complete with Twitch stream overlays, offline banners, and social header branding.",
+                previewBg: "from-teal-900 to-slate-900",
+                icon: "shield"
+            },
+            {
+                id: 5,
+                title: "SaaS AI Copywriting & Prompt App Web UI",
+                category: "web",
+                tag: "Web Design",
+                description: "Modern glassmorphic dashboard interface for AI prompt generators with dark/light mode toggle support.",
+                previewBg: "from-blue-900 to-slate-950",
+                icon: "code"
+            },
+            {
+                id: 6,
+                title: "Free Fire Championship Stream Banner & Thumbnails",
+                category: "thumbnails",
+                tag: "Esports Graphics",
+                description: "Action-packed gaming thumbnail series tailored for mobile stream highlights and tournament promo banners.",
+                previewBg: "from-red-950 to-orange-950",
+                icon: "tv"
+            }
+        ];
+
+        // Initialize Lucide Icons & Portfolio
+        window.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            renderPortfolio('all');
+        });
+
+        // WhatsApp Direct Link Generator
+        function openWhatsApp(subject, message) {
+            const formattedMessage = encodeURIComponent(`${message}\n\n[Ref: ${subject}]`);
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${formattedMessage}`;
+            window.open(url, '_blank');
+        }
+
+        // Copy Helper
+        function copyToClipboard(text, successMessage) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text);
+            } else {
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+            }
+            
+            showToast(successMessage);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.innerText = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Portfolio Render & Filter Logic
+        function renderPortfolio(categoryFilter) {
+            const container = document.getElementById('portfolio-grid');
+            container.innerHTML = '';
+
+            const filtered = categoryFilter === 'all' 
+                ? portfolioItems 
+                : portfolioItems.filter(item => item.category === categoryFilter);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "glass-panel rounded-2xl overflow-hidden neon-border cursor-pointer group flex flex-col justify-between";
+                card.onclick = () => openModal(item.id);
+
+                card.innerHTML = `
+                    <div>
+                        <div class="h-44 bg-gradient-to-br ${item.previewBg} p-6 flex flex-col justify-between relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                            <span class="self-start px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-bold text-cyan-300 uppercase tracking-wider">
+                                ${item.tag}
+                            </span>
+                            <div class="relative z-10 flex items-center justify-between">
+                                <i data-lucide="${item.icon}" class="w-8 h-8 text-cyan-400 group-hover:scale-110 transition-transform"></i>
+                                <span class="text-xs font-bold text-white bg-cyan-500/20 px-3 py-1 rounded-full border border-cyan-400/30 group-hover:bg-cyan-400 group-hover:text-black transition-all">
+                                    Click to Preview
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-display font-bold text-base text-white group-hover:text-cyan-400 transition-colors leading-snug">
+                                ${item.title}
+                            </h3>
+                            <p class="text-xs text-gray-400 mt-2 line-clamp-2 leading-relaxed">
+                                ${item.description}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-2 flex items-center justify-between text-xs text-cyan-400 font-semibold border-t border-gray-800/60 mt-2">
+                        <span>Order similar work</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+
+            lucide.createIcons();
+        }
+
+        function filterPortfolio(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.className = "filter-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-cyan-500 text-black border border-cyan-400 transition-all";
+                } else {
+                    btn.className = "filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-brand-card text-gray-300 border border-gray-800 hover:border-gray-700 transition-all";
+                }
+            });
+
+            renderPortfolio(category);
+        }
+
+        // Modal Functions
+        function openModal(itemId) {
+            const item = portfolioItems.find(p => p.id === itemId);
+            if (!item) return;
+
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = `
+                <div class="h-48 rounded-xl bg-gradient-to-br ${item.previewBg} p-6 flex flex-col justify-between border border-cyan-500/30">
+                    <span class="self-start px-3 py-1 rounded-md bg-black/60 text-xs font-bold text-cyan-300 uppercase tracking-wider">
+                        ${item.tag}
+                    </span>
+                    <div class="flex items-center space-x-3 text-white">
+                        <i data-lucide="${item.icon}" class="w-10 h-10 text-cyan-400"></i>
+                        <h3 class="text-xl font-bold font-display">${item.title}</h3>
+                    </div>
+                </div>
+
+                <div class="space-y-3 pt-2">
+                    <h4 class="text-xs font-bold uppercase text-cyan-400 tracking-wider">Project Overview</h4>
+                    <p class="text-sm text-gray-300 leading-relaxed">${item.description}</p>
+                    
+                    <div class="p-3 rounded-lg bg-gray-900 border border-gray-800 text-xs text-gray-400">
+                        ⚡ <strong>Delivery Time:</strong> 24-48 Hours | <strong>Revisions:</strong> Unlimited until satisfied
+                    </div>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                    <button onclick="openWhatsApp('${item.title}', 'Hi Arnav, I saw your project snippet &quot;${item.title}&quot; and I want to order a similar project!')" class="flex-1 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/20 hover:opacity-90 transition-opacity">
+                        <i data-lucide="shopping-bag" class="w-4 h-4 fill-black"></i>
+                        <span>Order This Style on WhatsApp</span>
+                    </button>
+                </div>
+            `;
+
+            document.getElementById('project-modal').classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
+```
