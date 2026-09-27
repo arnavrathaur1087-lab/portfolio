@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnav Rathaur | Premium Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-main: #0a0c10;
+            --bg-card: #121620;
+            --primary: #00f0ff;
+            --secondary: #ff0055;
+            --accent: #7000ff;
+            --text-main: #ffffff;
+            --text-muted: #8a99ad;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 18px 8%;
+            background: rgba(10, 12, 16, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            padding: 140px 8% 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at 50% 30%, rgba(112, 0, 255, 0.15), transparent 60%);
+        }
+
+        .avatar-box {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            padding: 3px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+        }
+
+        .avatar-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            max-width: 800px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.7);
+        }
+
+        /* Section Global */
+        .section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        /* Before/After Showcases */
+        .ba-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .ba-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .ba-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+        }
+
+        .ba-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .ba-box {
+            border-radius: 12px;
+            padding: 15px 10px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .ba-before {
+            background: #1e1e24;
+            color: #ff4757;
+            border: 1px dashed #ff4757;
+        }
+
+        .ba-after {
+            background: linear-gradient(135deg, rgba(0,240,255,0.1), rgba(255,0,85,0.1));
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .ba-box span {
+            display: block;
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            font-weight: 400;
+        }
+
+        .ba-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .ba-info p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 20px;
+            transition: 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Customer Reviews */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .review-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .stars {
+            color: #ffd700;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .review-text {
+            font-size: 14px;
+            color: #d1d5db;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .client-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .client-details h4 {
+            font-size: 15px;
+        }
+
+        .client-details span {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* CTA Section */
+        .cta-box {
+            background: linear-gradient(45deg, #121620, #1c0038);
+            border: 1px solid var(--accent);
+            border-radius: 30px;
+            padding: 50px 25px;
+            text-align: center;
+            margin: 40px 8%;
+            box-shadow: 0 0 40px rgba(112, 0, 255, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .section { padding: 50px 5%; }
+            .cta-box { margin: 20px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav>
+        <div class="logo">ARNAV <span>RATHAUR</span></div>
+        <a href="https://wa.me/919893635614?text=Hi%20Arnav,%20I%20want%20to%20discuss%20a%20project!" class="btn-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> Chat On WhatsApp
+        </a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="avatar-box">
+            <div class="avatar-inner">AR</div>
+        </div>
+        <h1>Converting Ideas Into <span>High-CTR Visuals & Code</span>.</h1>
+        <p>अर्णव राठौर — Web Developer, Gaming Thumbnail Artist, AI Prompt Specialist & Mascot Designer.</p>
+        
+        <div class="hero-btns">
+            <a href="https://wa.me/919893635614?text=Hi%20Arnav,%20I%20want%20to%20hire%20you!" class="btn-primary" target="_blank">
+                <i class="fab fa-whatsapp"></i> Hire Me Now
+            </a>
+            <a href="tel:9893635614" class="btn-primary" style="background: transparent; border: 1px solid var(--primary); box-shadow: none;">
+                <i class="fas fa-phone-alt"></i> Call: 9893635614
+            </a>
+        </div>
+    </section>
+
+    <!-- Before vs After Works Showcase -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Recent Work Showcase</h2>
+            <p>See how I transform normal designs into Viral High-CTR Assets</p>
+        </div>
+
+        <div class="ba-grid">
+            <!-- Item 1 -->
+            <div class="ba-card">
+                <div class="ba-comparison">
+                    <div class="ba-box ba-before">
+                        <span>BEFORE</span>
+                        Low CTR (2.1%)
+                        <span>Basic BGMI Render</span>
+                    </div>
+                    <div class="ba-box ba-after">
+                        <span>AFTER (ARNAV)</span>
+                        High CTR (14.8%)
+                        <span>3D Neon Glow + Viral Text</span>
+                    </div>
+                </div>
+                <div class="ba-info">
+                    <h3>BGMI Tournament Thumbnail</h3>
+                    <p>Designed for gaming creators to massively increase video clicks.</p>
+                    <a href="https://wa.me/919893635614?text=Hi%20Arnav,%20I%20need%20a%20BGMI%20Thumbnail%20like%20this!" class="btn-whatsapp" style="display:inline-flex;" target="_blank">
+                        Order This Style
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="ba-card">
+                <div class="ba-comparison">
+                    <div class="ba-box ba-before">
+                        <span>BEFORE</span>
+                        Slow Website
+                        <span>Boring Template</span>
+                    </div>
+                    <div class="ba-box ba-after">
+                        <span>AFTER (ARNAV)</span>
+                        Ultra Fast UI
+                        <span>Modern Dark Neon Web</span>
+                    </div>
+                </div>
+                <div class="ba-info">
+                    <h3>Creator Portfolio Website</h3>
+                    <p>High-converting portfolio with direct WhatsApp client triggers.</p>
+                    <a href="https://wa.me/919893635614?text=Hi%20Arnav,%20I%20need%20a%20Website%20like%20this!" class="btn-whatsapp" style="display:inline-flex;" target="_blank">
+                        Order Web Design
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" style="background: rgba(255,255,255,0.01);">
+        <div class="section-title">
+            <h2>My Services</h2>
+            <p>Click any service to instantly connect on WhatsApp</p>
+        </div>
+
+        <div class="services-grid">
+            <a href="https://wa.me/919893635614?text=Hi%20Arnav,%20I%20need%20Esports%20Thumbnails!" class="service-card" target="_blank">
+                <div class="service-icon"><i class="fas fa-gamepad"></i></div>
+                <h3>Esports Thumbnails</h3>
+                <p>High-CTR BGMI & Gaming Thumbnails built for massive video views.</p>
+            </a>
+
+            <a href="https://wa.me/919893635614?text=Hi%20Arnav,%20I%20need%20a%20Modern%20Website!" class="service-card" target="_blank">
+                <div class="service-icon"><i class="fas fa-code"></i></div>
+                <h3>Web Development</h3>
+                <p>Clean, ultra-fast websites & portfolios built to get client orders.</p>
+            </a>
+
+            <a href="https://wa.me/919893635614?text=Hi%20Arnav,%20I%20need%20AI%20Prompt%20Writing!" class="service-card" target="_blank">
+                <div class="service-icon"><i class="fas fa-robot"></i></div>
+                <h3>AI Prompt Writing</h3>
+                <p>Midjourney & AI text workflows for automated creative content.</p>
+            </a>
+
+            <a href="https://wa.me/919893635614?text=Hi%20Arnav,%20I%20need%20Mascot/Logo%20Branding!" class="service-card" target="_blank">
+                <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                <h3>Mascot & Logo Design</h3>
+                <p>Unique esports logos and full brand identity kits for streamers.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Client Reviews</h2>
+            <p>What creators and clients say about working with me</p>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">"Arnav's BGMI thumbnail boosted my video CTR from 3% to 12%. The quality and glow effects are next level!"</div>
+                <div class="client-info">
+                    <div class="client-avatar">RK</div>
+                    <div class="client-details">
+                        <h4>Rohan Kumar</h4>
+                        <span>Gaming Streamer (100k+ Subs)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">"Super fast web development! Arnav created my portfolio website in just 1 day with awesome WhatsApp integration."</div>
+                <div class="client-info">
+                    <div class="client-avatar">VS</div>
+                    <div class="client-details">
+                        <h4>Vikas Sharma</h4>
+                        <span>Agency Owner</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">"Top-tier mascot logo design! Very professional guy and delivers work on time. Highly recommended."</div>
+                <div class="client-info">
+                    <div class="client-avatar">AG</div>
+                    <div class="client-details">
+                        <h4>Aman Gupta</h4>
+                        <span>Esports Org Leader</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div class="cta-box">
+        <h2>Want To Boost Your Brand Today?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 25px;">Let's work together on your next design or web project.</p>
+        <a href="https://wa.me/919893635614?text=Hi%20Arnav,%20let's%20start%20a%20project!" class="btn-primary" target="_blank">
+            <i class="fab fa-whatsapp"></i> Chat On WhatsApp: 9893635614
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Arnav Rathaur (अर्णव राठौर). All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
